@@ -2,16 +2,19 @@
     "project_name": "project_name",
     "package_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
     "author_name": "HYGEOS",
-    "description": "A short description of the project.",
+    "description": "",
     "python_version_number": "3.10",
     "license": ["Unlicense", "MIT", "Apache-2.0", "AGPL-3.0-only"],
     "environment_manager": ["virtualenv", "conda", "pipenv", "uv", "none"],
     "dependency_file": ["requirements.txt", "pyproject.toml", "environment.yml"],
     
     "lint_and_format": ["none", "ruff", "flake8+black+isort"],
-    
+    "tests": [true, false],
+     
     "__prompts__": {
         "project_name": "Select your current directory name:",
-        "package_name": "Select your package name:"
+        "package_name": "Select your package name:",
+        "description" : "Write a short description of the project:",
+        "tests"       : "Will you create tests:"
     }
 }
