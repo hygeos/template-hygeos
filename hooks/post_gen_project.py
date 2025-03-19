@@ -11,12 +11,12 @@ def delete_resource(resource):
         # print("removing directory: {}".format(resource))
         shutil.rmtree(resource)
 
-# {% if license  == "Unlicense" %}
+# {% if cookiecutter.license  == "Unlicense" %}
 delete_resource('LICENCE.txt')
 # {% endif %}
 
-# {% if not tests %}
+# {% if not cookiecutter.tests %}
 delete_resource('tests')
 # {% endif %}
 
-print("{{cookiecutter.project_name}} has been succesfully created !")
+print("> {{cookiecutter.project_name}} has been succesfully created !")
