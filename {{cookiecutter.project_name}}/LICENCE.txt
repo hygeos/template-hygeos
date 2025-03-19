@@ -1,0 +1,7 @@
+{%- if cookiecutter.license == "MIT" -%}
+Some content about MIT Licence
+
+{%- elif cookiecutter.license == "BSD-3" -%}
+Some content about BSD Licence
+
+{% endif %}
