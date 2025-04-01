@@ -25,4 +25,4 @@ numpy = "<2"
 pytest-xdist = ">=3.6.1,<4"
 
 [tool.pixi.tasks]
-tests = "pytest tests/"
+{% if cookiecutter.tests %}tests = "pytest tests/"{% endif %}

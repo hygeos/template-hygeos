@@ -1,4 +1,5 @@
 {
+    "__root_folder": "hyp_root",
     "project_name": "project_name",
     "package_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
     "author_name": "HYGEOS",
@@ -12,7 +13,7 @@
     "tests": [true, false],
      
     "__prompts__": {
-        "project_name": "Select your current directory name:",
+        "project_name": "Select your project name:",
         "package_name": "Select your package name:",
         "description" : "Write a short description of the project:",
         "tests"       : "Will you create tests:"
