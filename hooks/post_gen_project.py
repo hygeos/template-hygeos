@@ -4,6 +4,12 @@ import shutil
 import subprocess
 
 from pathlib import Path
+from sys import exit
+
+def check(res):
+    if res.returncode != 0:
+        print("An error happened in the subprocess responsible for git init")
+        exit(1)
 
 def delete_resource(resource):
     if os.path.isfile(resource):
@@ -13,16 +19,27 @@ def delete_resource(resource):
         # print("removing directory: {}".format(resource))
         shutil.rmtree(resource)
 
-subprocess.run(f'git init -b main .', shell=True)
-subprocess.run('git add README.md && git commit -m "First commit"', shell=True)
+res = subprocess.run(f'git init -q -b main .', shell=True)
+check(res)
+res = subprocess.run('git add README.md && git commit -q -m "First commit"', shell=True)
+check(res)
 
 # {% if cookiecutter.license  == "Unlicense" %}
 delete_resource('LICENCE.txt')
 # {% endif %}
 
-# {% if not cookiecutter.tests %}
+# {% if not cookiecutter.__tests %}
 delete_resource('tests')
 delete_resource('pytest.ini')
 # {% endif %}
 
-print("> {{cookiecutter.project_name}} has been succesfully created !")
+# cleanup void.txt files 
+# -> they are used to commit the folder
+# -> this allow to visualize the template structure from the repo
+path = Path.cwd()
+for item in path.iterdir():
+        if item.is_dir():
+            void = item / "void.txt"
+            if void.is_file(): void.unlink()
+
+print("> project {{cookiecutter.project_name}} has been succesfully created !")

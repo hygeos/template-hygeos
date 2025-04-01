@@ -1,21 +1,19 @@
 {
-    "__root_folder": "hyp_root",
-    "project_name": "project_name",
-    "package_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
-    "author_name": "HYGEOS",
+    "__root_folder": "hyp_template_dir",
+    "project_name": "",
+    "__package_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "__author_name": "HYGEOS",
     "description": "",
     "python_version_number": "3.10",
     "license": ["Unlicense", "MIT", "Apache-2.0", "AGPL-3.0-only"],
-    "environment_manager": ["virtualenv", "conda", "pipenv", "uv", "none"],
-    "dependency_file": ["requirements.txt", "pyproject.toml", "environment.yml"],
+    "__environment_manager": "none",
+    "__dependency_file": "pyproject.toml",
     
-    "lint_and_format": ["none", "ruff", "flake8+black+isort"],
-    "tests": [true, false],
+    "__lint_and_format": "none",
+    "__tests": true,
      
     "__prompts__": {
-        "project_name": "Select your project name:",
-        "package_name": "Select your package name:",
-        "description" : "Write a short description of the project:",
-        "tests"       : "Will you create tests:"
+        "project_name": "Project name:",
+        "description" : "Description: "
     }
 }

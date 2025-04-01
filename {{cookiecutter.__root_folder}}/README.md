@@ -11,7 +11,7 @@
 
 ## Usage
 
-{% if cookiecutter.tests %}
+{% if cookiecutter.__tests %}
 ## Testing
 The following command runs the test suite with pytest, and generates a html report using pytest-html:
 ```sh
