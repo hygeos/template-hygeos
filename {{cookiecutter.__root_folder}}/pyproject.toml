@@ -3,6 +3,7 @@ name = "{{cookiecutter.__package_name}}"
 requires-python = ">= {{cookiecutter.python_version_number}}"
 version = "0.1.0"
 authors = [{name = "HYGEOS", email = "contact@hygeos.com"}]
+dependencies = []
 
 [build-system]
 requires = ["setuptools>=42"]
