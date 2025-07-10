@@ -19,10 +19,11 @@ make tests
 ```
 {% endif %}
 
-{% if cookiecutter.license  != "Unlicense" %}
+{% if cookiecutter.license  != "Unlicensed" %}
 ## Licencing information
 
-This software is available under {{cookiecutter.license}} licence. See file LICENSE.txt for details on the usage and distribution terms. 
+This software is available under {{cookiecutter.license}} licence. 
+Refer to LICENSE.txt for details on the usage and distribution terms. 
 {% endif %}
 
 ## Referencing

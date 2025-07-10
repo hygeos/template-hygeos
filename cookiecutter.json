@@ -5,7 +5,13 @@
     "__author_name": "HYGEOS",
     "description": "",
     "python_version_number": "3.10",
-    "license": ["Unlicense", "MIT", "Apache-2.0", "AGPL-3.0-only"],
+    "license": [
+        "Unlicensed",
+        "MIT",
+        "Apache v2.0",
+        "GPL v3.0",
+        "LGPL v3.0"
+    ],
     "__environment_manager": "none",
     "__dependency_file": "pyproject.toml",
     
