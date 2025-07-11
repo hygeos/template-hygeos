@@ -1,7 +1,8 @@
 [project]
 name = "{{cookiecutter.__package_name}}"
-requires-python = ">= {{cookiecutter.python_version_number}}"
 version = "0.1.0"
+description = "{{cookiecutter.description}}"
+requires-python = ">= 3.10"
 authors = [{name = "HYGEOS", email = "contact@hygeos.com"}]
 dependencies = []
 
@@ -19,19 +20,19 @@ platforms = ["linux-64"]
 [tool.pixi.pypi-dependencies]
 {{cookiecutter.__package_name}} = { path = ".", editable = true }
 
-[tool.pixi.environments]
-default = { features = ['sys', 'sub', 'dev'], solve-group = "default" }
-
 [tool.pixi.tasks]
 {% if cookiecutter.__tests %}tests = "pytest tests/"{% endif %}
 
 
 [tool.pixi.dependencies]
+ipykernel = "*"
 pytest = "*"
 pytest-html = "*"
 matplotlib-base = "*"
 pytest-xdist = "*"
 
+[tool.pixi.environments]
+default = { features = ['sys', 'sub', 'dev'], solve-group = "default" }
 
 [tool.pixi.feature.sys.dependencies]
 

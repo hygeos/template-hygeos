@@ -11,13 +11,6 @@
 
 ## Usage
 
-{% if cookiecutter.__tests %}
-## Testing
-The following command runs the test suite with pytest, and generates a html report using pytest-html:
-```sh
-make tests
-```
-{% endif %}
 
 {% if cookiecutter.license  != "Unlicensed" %}
 ## Licencing information
