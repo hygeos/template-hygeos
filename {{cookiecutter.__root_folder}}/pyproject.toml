@@ -11,6 +11,9 @@ requires = ["setuptools>=42"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
+packages = {find = {}}
+
+[tool.setuptools]
 packages = ["{{cookiecutter.__package_name}}"]  # only install this folder
 
 [tool.pixi.project]
